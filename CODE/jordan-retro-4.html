@@ -15,11 +15,6 @@
 
 <body>
 
-
-    <!-- =========================
-         MENÚ
-    ========================== -->
-
     <header>
 
         <div class="logo">
@@ -49,21 +44,10 @@
     </header>
 
 
-    <!-- =========================
-         PRODUCTO
-    ========================== -->
-
     <main class="producto-pagina">
 
 
-        <!-- =========================
-             GALERÍA
-        ========================== -->
-
         <div class="galeria">
-
-
-            <!-- FOTO PRINCIPAL -->
 
             <div class="producto-foto-grande">
 
@@ -76,12 +60,7 @@
             </div>
 
 
-            <!-- MINIATURAS -->
-
             <div class="miniaturas">
-
-
-                <!-- FOTO 1 -->
 
                 <button
                     type="button"
@@ -96,8 +75,6 @@
                 </button>
 
 
-                <!-- FOTO 2 -->
-
                 <button
                     type="button"
                     onclick="cambiarFoto('IMAGEN/JORDAN RETRO 4 BLACK 2.jpeg')"
@@ -111,8 +88,6 @@
                 </button>
 
 
-                <!-- FOTO 3 -->
-
                 <button
                     type="button"
                     onclick="cambiarFoto('IMAGEN/JORDAN RETRO 4 BLACK 3.jpeg')"
@@ -125,15 +100,10 @@
 
                 </button>
 
-
             </div>
 
         </div>
 
-
-        <!-- =========================
-             INFORMACIÓN
-        ========================== -->
 
         <div class="producto-detalles">
 
@@ -158,16 +128,11 @@
             </p>
 
 
-            <!-- =========================
-                 TALLA
-            ========================== -->
-
             <div class="campo">
 
                 <label>
                     TALLA
                 </label>
-
 
                 <div class="tallas">
 
@@ -183,16 +148,11 @@
             </div>
 
 
-            <!-- =========================
-                 CANTIDAD
-            ========================== -->
-
             <div class="campo">
 
                 <label>
                     CANTIDAD
                 </label>
-
 
                 <div class="cantidad">
 
@@ -203,11 +163,9 @@
                         −
                     </button>
 
-
                     <span id="cantidad">
                         1
                     </span>
-
 
                     <button
                         type="button"
@@ -221,10 +179,6 @@
             </div>
 
 
-            <!-- =========================
-                 PEDIDO
-            ========================== -->
-
             <div class="pedido">
 
                 <h2>
@@ -233,25 +187,16 @@
 
 
                 <p class="pedido-descripcion">
-
                     Completa tus datos y nos pondremos
                     en contacto contigo para acordar
                     la entrega.
-
                 </p>
 
 
-                <!-- =========================
-                     FORMULARIO
-                ========================== -->
-
                 <form
-                    action="https://formsubmit.co/b1937d0808420e9238cdf10dfca239e4"
+                    action="https://formsubmit.co/urbanstreetpr2@gmail.com"
                     method="POST"
                 >
-
-
-                    <!-- ASUNTO -->
 
                     <input
                         type="hidden"
@@ -260,16 +205,12 @@
                     >
 
 
-                    <!-- CAPTCHA -->
-
                     <input
                         type="hidden"
                         name="_captcha"
                         value="false"
                     >
 
-
-                    <!-- DISEÑO DEL CORREO -->
 
                     <input
                         type="hidden"
@@ -278,18 +219,12 @@
                     >
 
 
-                    <!-- REDIRECCIÓN -->
-
                     <input
                         type="hidden"
                         name="_next"
                         value="https://urbanstreetpr2-code.github.io/pr-streetwear/CODE/pedido-confirmado.html"
                     >
 
-
-                    <!-- =========================
-                         DATOS DEL PRODUCTO
-                    ========================== -->
 
                     <input
                         type="hidden"
@@ -312,14 +247,9 @@
                     >
 
 
-                    <!-- =========================
-                         NOMBRE
-                    ========================== -->
-
                     <label for="nombre">
                         NOMBRE
                     </label>
-
 
                     <input
                         type="text"
@@ -330,14 +260,9 @@
                     >
 
 
-                    <!-- =========================
-                         TELÉFONO
-                    ========================== -->
-
                     <label for="telefono">
                         TELÉFONO
                     </label>
-
 
                     <input
                         type="tel"
@@ -348,10 +273,6 @@
                     >
 
 
-                    <!-- =========================
-                         CANTIDAD
-                    ========================== -->
-
                     <input
                         type="hidden"
                         id="cantidadFormulario"
@@ -360,14 +281,9 @@
                     >
 
 
-                    <!-- =========================
-                         NOTA
-                    ========================== -->
-
                     <label for="nota">
                         NOTA
                     </label>
-
 
                     <textarea
                         id="nota"
@@ -376,10 +292,6 @@
                     ></textarea>
 
 
-                    <!-- =========================
-                         BOTÓN
-                    ========================== -->
-
                     <button
                         type="submit"
                         class="boton-pedido"
@@ -387,9 +299,7 @@
                         SOLICITAR PEDIDO
                     </button>
 
-
                 </form>
-
 
             </div>
 
@@ -398,16 +308,7 @@
     </main>
 
 
-    <!-- =========================
-         JAVASCRIPT
-    ========================== -->
-
     <script>
-
-
-        /* =========================
-           CAMBIAR FOTO
-        ========================== */
 
         function cambiarFoto(ruta) {
 
@@ -415,10 +316,6 @@
 
         }
 
-
-        /* =========================
-           CAMBIAR CANTIDAD
-        ========================== */
 
         let cantidadActual = 1;
 
@@ -443,7 +340,6 @@
                 cantidadActual;
 
         }
-
 
     </script>
 
