@@ -7,13 +7,18 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>JORDAN RETRO 4 BLACK | PR</title>
+    <title>JORDAN RETRO 4 BLACK | URBAN STREET PR</title>
 
     <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
+
+
+    <!-- =========================
+         MENÚ
+    ========================== -->
 
     <header>
 
@@ -44,10 +49,21 @@
     </header>
 
 
+    <!-- =========================
+         PRODUCTO
+    ========================== -->
+
     <main class="producto-pagina">
 
 
+        <!-- =========================
+             GALERÍA
+        ========================== -->
+
         <div class="galeria">
+
+
+            <!-- FOTO PRINCIPAL -->
 
             <div class="producto-foto-grande">
 
@@ -60,7 +76,12 @@
             </div>
 
 
+            <!-- MINIATURAS -->
+
             <div class="miniaturas">
+
+
+                <!-- FOTO 1 -->
 
                 <button
                     type="button"
@@ -75,6 +96,8 @@
                 </button>
 
 
+                <!-- FOTO 2 -->
+
                 <button
                     type="button"
                     onclick="cambiarFoto('IMAGEN/JORDAN RETRO 4 BLACK 2.jpeg')"
@@ -88,6 +111,8 @@
                 </button>
 
 
+                <!-- FOTO 3 -->
+
                 <button
                     type="button"
                     onclick="cambiarFoto('IMAGEN/JORDAN RETRO 4 BLACK 3.jpeg')"
@@ -100,35 +125,49 @@
 
                 </button>
 
+
             </div>
 
         </div>
 
 
+        <!-- =========================
+             INFORMACIÓN
+        ========================== -->
+
         <div class="producto-detalles">
 
+
             <p class="producto-marca">
-                PR STREETWEAR
+                URBAN STREET PR
             </p>
+
 
             <h1>
                 JORDAN RETRO 4
             </h1>
 
+
             <p class="producto-color">
                 BLACK
             </p>
+
 
             <p class="producto-precio">
                 75 €
             </p>
 
 
+            <!-- =========================
+                 TALLA
+            ========================== -->
+
             <div class="campo">
 
                 <label>
                     TALLA
                 </label>
+
 
                 <div class="tallas">
 
@@ -144,11 +183,16 @@
             </div>
 
 
+            <!-- =========================
+                 CANTIDAD
+            ========================== -->
+
             <div class="campo">
 
                 <label>
                     CANTIDAD
                 </label>
+
 
                 <div class="cantidad">
 
@@ -159,9 +203,11 @@
                         −
                     </button>
 
+
                     <span id="cantidad">
                         1
                     </span>
+
 
                     <button
                         type="button"
@@ -175,11 +221,16 @@
             </div>
 
 
+            <!-- =========================
+                 PEDIDO
+            ========================== -->
+
             <div class="pedido">
 
                 <h2>
                     SOLICITAR PEDIDO
                 </h2>
+
 
                 <p class="pedido-descripcion">
 
@@ -190,11 +241,17 @@
                 </p>
 
 
+                <!-- =========================
+                     FORMULARIO
+                ========================== -->
+
                 <form
                     action="https://formsubmit.co/b1937d0808420e9238cdf10dfca239e4"
                     method="POST"
                 >
 
+
+                    <!-- ASUNTO -->
 
                     <input
                         type="hidden"
@@ -203,6 +260,8 @@
                     >
 
 
+                    <!-- CAPTCHA -->
+
                     <input
                         type="hidden"
                         name="_captcha"
@@ -210,12 +269,27 @@
                     >
 
 
+                    <!-- DISEÑO DEL CORREO -->
+
                     <input
                         type="hidden"
                         name="_template"
                         value="table"
                     >
 
+
+                    <!-- REDIRECCIÓN -->
+
+                    <input
+                        type="hidden"
+                        name="_next"
+                        value="https://urbanstreetpr2-code.github.io/pr-streetwear/CODE/pedido-confirmado.html"
+                    >
+
+
+                    <!-- =========================
+                         DATOS DEL PRODUCTO
+                    ========================== -->
 
                     <input
                         type="hidden"
@@ -238,9 +312,14 @@
                     >
 
 
+                    <!-- =========================
+                         NOMBRE
+                    ========================== -->
+
                     <label for="nombre">
                         NOMBRE
                     </label>
+
 
                     <input
                         type="text"
@@ -251,9 +330,14 @@
                     >
 
 
+                    <!-- =========================
+                         TELÉFONO
+                    ========================== -->
+
                     <label for="telefono">
                         TELÉFONO
                     </label>
+
 
                     <input
                         type="tel"
@@ -264,6 +348,10 @@
                     >
 
 
+                    <!-- =========================
+                         CANTIDAD
+                    ========================== -->
+
                     <input
                         type="hidden"
                         id="cantidadFormulario"
@@ -272,9 +360,14 @@
                     >
 
 
+                    <!-- =========================
+                         NOTA
+                    ========================== -->
+
                     <label for="nota">
                         NOTA
                     </label>
+
 
                     <textarea
                         id="nota"
@@ -282,6 +375,10 @@
                         placeholder="¿Quieres añadir alguna información?"
                     ></textarea>
 
+
+                    <!-- =========================
+                         BOTÓN
+                    ========================== -->
 
                     <button
                         type="submit"
@@ -293,6 +390,7 @@
 
                 </form>
 
+
             </div>
 
         </div>
@@ -300,7 +398,16 @@
     </main>
 
 
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
     <script>
+
+
+        /* =========================
+           CAMBIAR FOTO
+        ========================== */
 
         function cambiarFoto(ruta) {
 
@@ -309,12 +416,16 @@
         }
 
 
+        /* =========================
+           CAMBIAR CANTIDAD
+        ========================== */
+
         let cantidadActual = 1;
 
 
         function cambiarCantidad(cambio) {
 
-            cantidadActual += cambio;
+            cantidadActual = cantidadActual + cambio;
 
 
             if (cantidadActual < 1) {
@@ -332,6 +443,7 @@
                 cantidadActual;
 
         }
+
 
     </script>
 
