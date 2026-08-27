@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="es">
 
@@ -64,8 +63,6 @@
         <div class="galeria">
 
 
-            <!-- FOTO PRINCIPAL -->
-
             <div class="producto-foto-grande">
 
                 <img
@@ -77,12 +74,8 @@
             </div>
 
 
-            <!-- MINIATURAS -->
-
             <div class="miniaturas">
 
-
-                <!-- FOTO 1 -->
 
                 <button
                     type="button"
@@ -97,8 +90,6 @@
                 </button>
 
 
-                <!-- FOTO 2 -->
-
                 <button
                     type="button"
                     onclick="cambiarFoto('IMAGEN/Nocta-orange-2.jpg')"
@@ -111,8 +102,6 @@
 
                 </button>
 
-
-                <!-- FOTO 3 -->
 
                 <button
                     type="button"
@@ -245,12 +234,10 @@
                 ========================== -->
 
                 <form
-                    action="https://formsubmit.co/urbanstreetpr2@gmail.com"
+                    action="https://formsubmit.co/b1937d0808420e9238cdf10dfca239e4"
                     method="POST"
                 >
 
-
-                    <!-- ASUNTO -->
 
                     <input
                         type="hidden"
@@ -259,16 +246,12 @@
                     >
 
 
-                    <!-- CAPTCHA -->
-
                     <input
                         type="hidden"
                         name="_captcha"
                         value="false"
                     >
 
-
-                    <!-- PLANTILLA -->
 
                     <input
                         type="hidden"
@@ -277,18 +260,7 @@
                     >
 
 
-                    <!-- REDIRECCIÓN DESPUÉS DEL PEDIDO -->
-
-                    <input
-                        type="hidden"
-                        name="_next"
-                        value="https://urbanstreetpr2-code.github.io/pr-streetwear/CODE/producto.html"
-                    >
-
-
-                    <!-- =========================
-                         DATOS DEL PRODUCTO
-                    ========================== -->
+                    <!-- PRODUCTO -->
 
                     <input
                         type="hidden"
@@ -311,9 +283,7 @@
                     >
 
 
-                    <!-- =========================
-                         NOMBRE
-                    ========================== -->
+                    <!-- NOMBRE -->
 
                     <label for="nombre">
                         NOMBRE
@@ -328,9 +298,7 @@
                     >
 
 
-                    <!-- =========================
-                         TELÉFONO
-                    ========================== -->
+                    <!-- TELÉFONO -->
 
                     <label for="telefono">
                         TELÉFONO
@@ -345,9 +313,7 @@
                     >
 
 
-                    <!-- =========================
-                         CANTIDAD
-                    ========================== -->
+                    <!-- CANTIDAD -->
 
                     <input
                         type="hidden"
@@ -357,9 +323,7 @@
                     >
 
 
-                    <!-- =========================
-                         NOTA
-                    ========================== -->
+                    <!-- NOTA -->
 
                     <label for="nota">
                         NOTA
@@ -372,9 +336,7 @@
                     ></textarea>
 
 
-                    <!-- =========================
-                         BOTÓN
-                    ========================== -->
+                    <!-- BOTÓN -->
 
                     <button
                         type="submit"
@@ -400,20 +362,12 @@
     <script>
 
 
-        /* =========================
-           CAMBIAR FOTO
-        ========================== */
-
         function cambiarFoto(ruta) {
 
             document.getElementById("fotoPrincipal").src = ruta;
 
         }
 
-
-        /* =========================
-           CANTIDAD
-        ========================== */
 
         let cantidadActual = 1;
 
@@ -446,4 +400,3 @@
 </body>
 
 </html>
-```
