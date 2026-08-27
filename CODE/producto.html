@@ -7,7 +7,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>NIKE NOCTA X DRAKE | PR</title>
+    <title>NIKE NOCTA X DRAKE | URBAN STREET PR</title>
 
     <link rel="stylesheet" href="style.css">
 
@@ -63,6 +63,8 @@
         <div class="galeria">
 
 
+            <!-- FOTO PRINCIPAL -->
+
             <div class="producto-foto-grande">
 
                 <img
@@ -74,8 +76,12 @@
             </div>
 
 
+            <!-- MINIATURAS -->
+
             <div class="miniaturas">
 
+
+                <!-- FOTO 1 -->
 
                 <button
                     type="button"
@@ -90,6 +96,8 @@
                 </button>
 
 
+                <!-- FOTO 2 -->
+
                 <button
                     type="button"
                     onclick="cambiarFoto('IMAGEN/Nocta-orange-2.jpg')"
@@ -102,6 +110,8 @@
 
                 </button>
 
+
+                <!-- FOTO 3 -->
 
                 <button
                     type="button"
@@ -129,7 +139,7 @@
 
 
             <p class="producto-marca">
-                PR STREETWEAR
+                URBAN STREET PR
             </p>
 
 
@@ -158,6 +168,7 @@
                     TALLA
                 </label>
 
+
                 <div class="tallas">
 
                     <button
@@ -181,6 +192,7 @@
                 <label>
                     CANTIDAD
                 </label>
+
 
                 <div class="cantidad">
 
@@ -239,12 +251,16 @@
                 >
 
 
+                    <!-- ASUNTO -->
+
                     <input
                         type="hidden"
                         name="_subject"
-                        value="NUEVO PEDIDO - NIKE NOCTA X DRAKE"
+                        value="NUEVO PEDIDO - NIKE NOCTA X DRAKE TOTAL ORANGE"
                     >
 
+
+                    <!-- CAPTCHA -->
 
                     <input
                         type="hidden"
@@ -253,6 +269,8 @@
                     >
 
 
+                    <!-- DISEÑO DEL CORREO -->
+
                     <input
                         type="hidden"
                         name="_template"
@@ -260,7 +278,18 @@
                     >
 
 
-                    <!-- PRODUCTO -->
+                    <!-- REDIRECCIÓN -->
+
+                    <input
+                        type="hidden"
+                        name="_next"
+                        value="https://urbanstreetpr2-code.github.io/pr-streetwear/CODE/pedido-confirmado.html"
+                    >
+
+
+                    <!-- =========================
+                         DATOS DEL PRODUCTO
+                    ========================== -->
 
                     <input
                         type="hidden"
@@ -283,11 +312,14 @@
                     >
 
 
-                    <!-- NOMBRE -->
+                    <!-- =========================
+                         NOMBRE
+                    ========================== -->
 
                     <label for="nombre">
                         NOMBRE
                     </label>
+
 
                     <input
                         type="text"
@@ -298,11 +330,14 @@
                     >
 
 
-                    <!-- TELÉFONO -->
+                    <!-- =========================
+                         TELÉFONO
+                    ========================== -->
 
                     <label for="telefono">
                         TELÉFONO
                     </label>
+
 
                     <input
                         type="tel"
@@ -313,7 +348,9 @@
                     >
 
 
-                    <!-- CANTIDAD -->
+                    <!-- =========================
+                         CANTIDAD
+                    ========================== -->
 
                     <input
                         type="hidden"
@@ -323,11 +360,14 @@
                     >
 
 
-                    <!-- NOTA -->
+                    <!-- =========================
+                         NOTA
+                    ========================== -->
 
                     <label for="nota">
                         NOTA
                     </label>
+
 
                     <textarea
                         id="nota"
@@ -336,7 +376,9 @@
                     ></textarea>
 
 
-                    <!-- BOTÓN -->
+                    <!-- =========================
+                         BOTÓN
+                    ========================== -->
 
                     <button
                         type="submit"
@@ -347,6 +389,7 @@
 
 
                 </form>
+
 
             </div>
 
@@ -362,6 +405,10 @@
     <script>
 
 
+        /* =========================
+           CAMBIAR FOTO
+        ========================== */
+
         function cambiarFoto(ruta) {
 
             document.getElementById("fotoPrincipal").src = ruta;
@@ -369,12 +416,16 @@
         }
 
 
+        /* =========================
+           CAMBIAR CANTIDAD
+        ========================== */
+
         let cantidadActual = 1;
 
 
         function cambiarCantidad(cambio) {
 
-            cantidadActual += cambio;
+            cantidadActual = cantidadActual + cambio;
 
 
             if (cantidadActual < 1) {
