@@ -1,16 +1,21 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>NIKE NOCTA X DRAKE | PR</title>
 
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+
 
     <!-- =========================
          MENÚ
@@ -36,7 +41,7 @@
                 CAMISETAS
             </a>
 
-            <a href="#">
+            <a href="zapatos.html">
                 ZAPATOS
             </a>
 
@@ -134,28 +139,20 @@
         <div class="producto-detalles">
 
 
-            <!-- MARCA -->
-
             <p class="producto-marca">
                 PR STREETWEAR
             </p>
 
-
-            <!-- NOMBRE -->
 
             <h1>
                 NIKE NOCTA X DRAKE
             </h1>
 
 
-            <!-- COLOR -->
-
             <p class="producto-color">
                 TOTAL ORANGE
             </p>
 
-
-            <!-- PRECIO -->
 
             <p class="producto-precio">
                 75 €
@@ -253,16 +250,16 @@
                 >
 
 
-                    <!-- ASUNTO DEL CORREO -->
+                    <!-- ASUNTO -->
 
                     <input
                         type="hidden"
                         name="_subject"
-                        value="NUEVO PEDIDO - PR STREETWEAR"
+                        value="NUEVO PEDIDO - NIKE NOCTA X DRAKE"
                     >
 
 
-                    <!-- DESACTIVAR CAPTCHA -->
+                    <!-- CAPTCHA -->
 
                     <input
                         type="hidden"
@@ -271,12 +268,21 @@
                     >
 
 
-                    <!-- DISEÑO DEL CORREO -->
+                    <!-- PLANTILLA -->
 
                     <input
                         type="hidden"
                         name="_template"
                         value="table"
+                    >
+
+
+                    <!-- REDIRECCIÓN DESPUÉS DEL PEDIDO -->
+
+                    <input
+                        type="hidden"
+                        name="_next"
+                        value="https://urbanstreetpr2-code.github.io/pr-streetwear/CODE/producto.html"
                     >
 
 
@@ -313,7 +319,6 @@
                         NOMBRE
                     </label>
 
-
                     <input
                         type="text"
                         id="nombre"
@@ -330,7 +335,6 @@
                     <label for="telefono">
                         TELÉFONO
                     </label>
-
 
                     <input
                         type="tel"
@@ -360,7 +364,6 @@
                     <label for="nota">
                         NOTA
                     </label>
-
 
                     <textarea
                         id="nota"
@@ -417,11 +420,8 @@
 
         function cambiarCantidad(cambio) {
 
+            cantidadActual += cambio;
 
-            cantidadActual = cantidadActual + cambio;
-
-
-            /* Nunca permitir menos de 1 */
 
             if (cantidadActual < 1) {
 
@@ -430,13 +430,9 @@
             }
 
 
-            /* Cambiar número visible */
-
             document.getElementById("cantidad").textContent =
                 cantidadActual;
 
-
-            /* Cambiar cantidad que recibirá el correo */
 
             document.getElementById("cantidadPedido").value =
                 cantidadActual;
@@ -450,3 +446,4 @@
 </body>
 
 </html>
+```
