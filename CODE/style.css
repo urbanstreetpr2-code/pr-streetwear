@@ -1,6 +1,7 @@
+```css
 /* ==================================================
-   PR STREETWEAR
-   CSS COMPLETO
+   URBAN STREET PR
+   DISEÑO STREETWEAR PREMIUM
 ================================================== */
 
 
@@ -19,10 +20,8 @@ html {
 body {
     margin: 0;
     padding: 0;
-
-    background-color: #000;
+    background: #050505;
     color: #fff;
-
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -33,51 +32,78 @@ body {
 
 header {
     width: 100%;
-    height: 80px;
+    height: 82px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 50px;
+    padding: 0 55px;
 
-    background-color: #000;
+    background: rgba(5, 5, 5, 0.96);
 
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #1d1d1d;
 
     position: relative;
     z-index: 10;
 }
 
 .logo {
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 34px;
+    font-weight: 900;
 
-    letter-spacing: 2px;
+    letter-spacing: 5px;
+
+    transition: 0.3s;
+}
+
+.logo:hover {
+    letter-spacing: 8px;
 }
 
 nav {
     display: flex;
     align-items: center;
-
-    gap: 40px;
+    gap: 38px;
 }
 
 nav a {
-    color: white;
+    position: relative;
+
+    color: #fff;
 
     text-decoration: none;
 
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: #fff;
 
     transition: 0.3s;
 }
 
 nav a:hover {
     color: #aaa;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 
@@ -87,7 +113,9 @@ nav a:hover {
 
 .hero {
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 82px);
+
+    min-height: 600px;
 
     position: relative;
 
@@ -101,28 +129,38 @@ nav a:hover {
     object-fit: cover;
 
     display: block;
+
+    transform: scale(1.02);
+
+    transition: transform 1.5s ease;
+}
+
+.hero:hover img {
+    transform: scale(1.06);
 }
 
 
-/* Capa oscura sobre la imagen */
+/* CAPA OSCURA */
 
 .hero::after {
     content: "";
 
     position: absolute;
 
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: 0;
 
-    background: rgba(0, 0, 0, 0.35);
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.58)
+        );
 
     z-index: 1;
 }
 
 
-/* Texto de portada */
+/* TEXTO */
 
 .hero-text {
     position: absolute;
@@ -142,25 +180,33 @@ nav a:hover {
 .hero-text h1 {
     margin: 0;
 
-    font-size: 110px;
+    font-size: clamp(75px, 12vw, 150px);
 
-    letter-spacing: 15px;
+    font-weight: 900;
+
+    letter-spacing: 22px;
+
+    line-height: 0.9;
 }
 
 .hero-text h2 {
-    margin: 0 0 20px;
+    margin: 18px 0 22px;
 
-    font-size: 36px;
+    font-size: clamp(24px, 4vw, 48px);
 
-    letter-spacing: 10px;
+    font-weight: 700;
+
+    letter-spacing: 13px;
 }
 
 .hero-text p {
     margin: 0;
 
-    font-size: 16px;
+    font-size: 13px;
 
-    letter-spacing: 5px;
+    letter-spacing: 6px;
+
+    color: #ddd;
 }
 
 
@@ -169,110 +215,141 @@ nav a:hover {
 ================================================== */
 
 .boton {
-    display: inline-block;
+    display: inline-flex;
 
-    margin-top: 25px;
+    align-items: center;
+    justify-content: center;
 
-    padding: 16px 35px;
+    margin-top: 32px;
 
-    background-color: white;
+    padding: 17px 38px;
 
-    color: black;
+    background: #fff;
+
+    color: #000;
 
     text-decoration: none;
 
-    font-size: 13px;
+    font-size: 11px;
 
     font-weight: bold;
 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 
-    transition: 0.3s;
+    border: 1px solid #fff;
+
+    transition:
+        background 0.3s,
+        color 0.3s,
+        transform 0.3s;
 }
 
 .boton:hover {
-    background-color: #ddd;
+    background: transparent;
+
+    color: #fff;
+
+    transform: translateY(-3px);
 }
 
 
 /* ==================================================
-   NUEVA COLECCIÓN
+   COLECCIÓN
 ================================================== */
 
 .coleccion {
     width: 100%;
 
-    background-color: #000;
+    background: #050505;
 
-    padding: 100px 50px;
+    padding: 120px 55px;
 }
 
 .titulo-coleccion {
     text-align: center;
 
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .titulo-coleccion p {
-    margin: 0 0 10px;
+    margin: 0 0 14px;
 
-    color: #aaa;
+    color: #777;
 
-    font-size: 12px;
+    font-size: 10px;
 
-    letter-spacing: 4px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
 }
 
 .titulo-coleccion h2 {
     margin: 0;
 
-    font-size: 42px;
+    font-size: clamp(30px, 4vw, 48px);
 
-    letter-spacing: 5px;
+    font-weight: 800;
+
+    letter-spacing: 7px;
 }
 
 
 /* ==================================================
-   GRID DE PRODUCTOS
+   PRODUCTOS
 ================================================== */
 
 .productos {
     width: 100%;
 
-    max-width: 1500px;
+    max-width: 1450px;
 
     margin: 0 auto;
 
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
-    gap: 25px;
+    gap: 28px;
 }
 
 
 /* ==================================================
-   TARJETA DE PRODUCTO
+   TARJETA
 ================================================== */
 
 .producto {
-    background-color: #111;
+    position: relative;
 
-    transition: 0.3s;
+    background: #0d0d0d;
+
+    border: 1px solid #191919;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
 }
 
 .producto:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+
+    border-color: #444;
 }
 
 
-/* Imagen de tarjeta */
+/* ==================================================
+   IMAGEN DEL PRODUCTO
+================================================== */
 
 .producto-imagen {
     width: 100%;
-    height: 420px;
+
+    height: 560px;
 
     overflow: hidden;
+
+    background: #111;
 }
 
 .producto-imagen img {
@@ -282,68 +359,95 @@ nav a:hover {
     object-fit: cover;
 
     display: block;
+
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.producto:hover .producto-imagen img {
+    transform: scale(1.06);
+
+    filter: brightness(0.82);
 }
 
 
-/* Información */
+/* ==================================================
+   INFORMACIÓN
+================================================== */
 
 .producto-info {
-    padding: 25px;
+    padding: 28px 30px 32px;
 }
 
 .producto-info h3 {
     margin: 0;
 
-    font-size: 16px;
+    font-size: 17px;
 
-    letter-spacing: 1px;
-}
-
-.modelo {
-    margin: 10px 0;
-
-    color: #aaa;
-
-    font-size: 12px;
+    font-weight: bold;
 
     letter-spacing: 2px;
 }
 
-.precio {
-    margin: 15px 0;
+.modelo {
+    margin: 10px 0 0;
 
-    font-size: 20px;
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.precio {
+    margin: 20px 0;
+
+    font-size: 22px;
 
     font-weight: bold;
 }
 
 
-/* Botón producto */
+/* ==================================================
+   BOTÓN PRODUCTO
+================================================== */
 
 .boton-producto {
-    display: inline-block;
+    display: inline-flex;
 
-    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
 
-    padding: 12px 20px;
+    padding: 13px 22px;
 
-    border: 1px solid white;
+    border: 1px solid #555;
 
-    color: white;
+    color: #fff;
 
     text-decoration: none;
 
-    font-size: 12px;
+    font-size: 10px;
+
+    font-weight: bold;
 
     letter-spacing: 2px;
 
-    transition: 0.3s;
+    transition:
+        background 0.3s,
+        color 0.3s,
+        border-color 0.3s,
+        transform 0.3s;
 }
 
 .boton-producto:hover {
-    background-color: white;
+    background: #fff;
 
-    color: black;
+    color: #000;
+
+    border-color: #fff;
+
+    transform: translateY(-2px);
 }
 
 
@@ -354,19 +458,19 @@ nav a:hover {
 .producto-pagina {
     width: 100%;
 
-    max-width: 1400px;
+    max-width: 1450px;
 
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 82px);
 
     margin: 0 auto;
 
-    padding: 70px 50px;
+    padding: 80px 55px;
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr 0.9fr;
 
-    gap: 70px;
+    gap: 80px;
 }
 
 
@@ -379,14 +483,16 @@ nav a:hover {
 }
 
 
-/* Foto grande */
+/* FOTO GRANDE */
 
 .producto-foto-grande {
     width: 100%;
 
-    height: 650px;
+    height: 680px;
 
-    background-color: #111;
+    background: #0d0d0d;
+
+    border: 1px solid #1d1d1d;
 
     overflow: hidden;
 }
@@ -398,6 +504,12 @@ nav a:hover {
     object-fit: cover;
 
     display: block;
+
+    transition: transform 0.7s ease;
+}
+
+.producto-foto-grande:hover img {
+    transform: scale(1.025);
 }
 
 
@@ -419,23 +531,27 @@ nav a:hover {
 
 .miniaturas button {
     width: 100%;
-    height: 120px;
+    height: 125px;
 
     padding: 0;
 
-    background-color: #111;
+    background: #0d0d0d;
 
-    border: 1px solid #333;
+    border: 1px solid #292929;
 
     cursor: pointer;
 
     overflow: hidden;
 
-    transition: 0.3s;
+    transition:
+        border-color 0.3s,
+        transform 0.3s;
 }
 
 .miniaturas button:hover {
-    border-color: white;
+    border-color: #fff;
+
+    transform: translateY(-3px);
 }
 
 .miniaturas img {
@@ -445,20 +561,50 @@ nav a:hover {
     object-fit: cover;
 
     display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.miniaturas button:hover img {
+    transform: scale(1.06);
 }
 
 
 /* ==================================================
-   INFORMACIÓN DEL PRODUCTO
+   DETALLES DEL PRODUCTO
 ================================================== */
 
 .producto-detalles {
     width: 100%;
 
-    padding: 20px 0;
+    padding: 15px 0;
 }
 
 .producto-marca {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+}
+
+.producto-detalles h1 {
+    margin: 18px 0 12px;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    line-height: 1.05;
+}
+
+.producto-color {
     margin: 0;
 
     color: #888;
@@ -468,30 +614,10 @@ nav a:hover {
     letter-spacing: 4px;
 }
 
-.producto-detalles h1 {
-    margin: 20px 0 10px;
-
-    font-size: 40px;
-
-    letter-spacing: 2px;
-
-    line-height: 1.1;
-}
-
-.producto-color {
-    margin: 0;
-
-    color: #aaa;
-
-    font-size: 14px;
-
-    letter-spacing: 3px;
-}
-
 .producto-precio {
-    margin: 30px 0 40px;
+    margin: 32px 0 45px;
 
-    font-size: 28px;
+    font-size: 30px;
 
     font-weight: bold;
 }
@@ -502,19 +628,21 @@ nav a:hover {
 ================================================== */
 
 .campo {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 
 .campo label {
     display: block;
 
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 
-    font-size: 12px;
+    color: #aaa;
+
+    font-size: 10px;
 
     font-weight: bold;
 
-    letter-spacing: 2px;
+    letter-spacing: 3px;
 }
 
 
@@ -529,16 +657,16 @@ nav a:hover {
 }
 
 .tallas button {
-    width: 70px;
-    height: 48px;
+    width: 72px;
+    height: 50px;
 
-    background-color: white;
+    background: #fff;
 
-    color: black;
+    color: #000;
 
-    border: 1px solid white;
+    border: 1px solid #fff;
 
-    font-size: 14px;
+    font-size: 13px;
 
     font-weight: bold;
 
@@ -555,16 +683,16 @@ nav a:hover {
 
     align-items: center;
 
-    gap: 20px;
+    gap: 18px;
 }
 
 .cantidad button {
-    width: 40px;
-    height: 40px;
+    width: 42px;
+    height: 42px;
 
-    background-color: black;
+    background: #080808;
 
-    color: white;
+    color: #fff;
 
     border: 1px solid #444;
 
@@ -572,62 +700,75 @@ nav a:hover {
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition:
+        background 0.3s,
+        color 0.3s,
+        border-color 0.3s;
 }
 
 .cantidad button:hover {
-    background-color: white;
+    background: #fff;
 
-    color: black;
+    color: #000;
+
+    border-color: #fff;
 }
 
 .cantidad span {
-    min-width: 20px;
+    min-width: 25px;
 
     text-align: center;
 
-    font-size: 18px;
+    font-size: 17px;
 }
 
 
 /* ==================================================
-   FORMULARIO DE PEDIDO
+   FORMULARIO
 ================================================== */
 
 .pedido {
-    margin-top: 50px;
+    margin-top: 55px;
 
-    padding-top: 40px;
+    padding-top: 42px;
 
-    border-top: 1px solid #222;
+    border-top: 1px solid #202020;
 }
 
 .pedido h2 {
     margin: 0;
 
-    font-size: 24px;
+    font-size: 23px;
 
-    letter-spacing: 3px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
 }
 
 .pedido-descripcion {
-    margin: 15px 0 30px;
+    max-width: 500px;
 
-    color: #888;
+    margin: 16px 0 32px;
 
-    font-size: 13px;
+    color: #777;
 
-    line-height: 1.6;
+    font-size: 12px;
+
+    line-height: 1.8;
 }
 
 .pedido label {
     display: block;
 
-    margin-top: 20px;
+    margin-top: 22px;
 
-    margin-bottom: 8px;
+    margin-bottom: 9px;
 
-    font-size: 11px;
+    color: #aaa;
+
+    font-size: 10px;
+
+    font-weight: bold;
 
     letter-spacing: 2px;
 }
@@ -636,39 +777,41 @@ nav a:hover {
 .pedido textarea {
     width: 100%;
 
-    padding: 15px;
+    padding: 15px 16px;
 
-    background-color: #111;
+    background: #0d0d0d;
 
-    color: white;
+    color: #fff;
 
-    border: 1px solid #333;
+    border: 1px solid #292929;
 
     outline: none;
 
     font-family: Arial, Helvetica, sans-serif;
 
-    font-size: 14px;
+    font-size: 13px;
+
+    transition: border-color 0.3s;
 }
 
 .pedido input {
-    height: 50px;
+    height: 52px;
 }
 
 .pedido textarea {
-    min-height: 100px;
+    min-height: 110px;
 
     resize: vertical;
 }
 
 .pedido input:focus,
 .pedido textarea:focus {
-    border-color: white;
+    border-color: #aaa;
 }
 
 
 /* ==================================================
-   BOTÓN SOLICITAR PEDIDO
+   BOTÓN PEDIDO
 ================================================== */
 
 .boton-pedido {
@@ -676,15 +819,15 @@ nav a:hover {
 
     margin-top: 30px;
 
-    padding: 18px;
+    padding: 19px;
 
-    background-color: white;
+    background: #fff;
 
-    color: black;
+    color: #000;
 
-    border: none;
+    border: 1px solid #fff;
 
-    font-size: 13px;
+    font-size: 11px;
 
     font-weight: bold;
 
@@ -692,26 +835,33 @@ nav a:hover {
 
     cursor: pointer;
 
-    transition: 0.3s;
+    transition:
+        background 0.3s,
+        color 0.3s,
+        transform 0.3s;
 }
 
 .boton-pedido:hover {
-    background-color: #ddd;
+    background: transparent;
+
+    color: #fff;
+
+    transform: translateY(-2px);
 }
 
 
 /* ==================================================
-   MENSAJE DEL PEDIDO
+   MENSAJE PEDIDO
 ================================================== */
 
 .mensaje-pedido {
     margin-top: 15px;
 
-    color: #aaa;
+    color: #888;
 
-    font-size: 13px;
+    font-size: 12px;
 
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 
@@ -721,18 +871,30 @@ nav a:hover {
 
 @media (max-width: 1100px) {
 
-    .productos {
-        grid-template-columns: repeat(2, 1fr);
+    header {
+        padding: 0 35px;
+    }
+
+    nav {
+        gap: 25px;
+    }
+
+    .coleccion {
+        padding: 90px 35px;
+    }
+
+    .producto-imagen {
+        height: 480px;
     }
 
     .producto-pagina {
-        gap: 40px;
+        padding: 60px 35px;
 
-        padding: 60px 30px;
+        gap: 45px;
     }
 
-    .producto-detalles h1 {
-        font-size: 34px;
+    .producto-foto-grande {
+        height: 580px;
     }
 
 }
@@ -753,27 +915,37 @@ nav a:hover {
     }
 
     nav a {
-        font-size: 11px;
+        font-size: 10px;
+
+        letter-spacing: 1px;
     }
 
     .hero-text h1 {
-        font-size: 70px;
+        letter-spacing: 14px;
     }
 
     .hero-text h2 {
-        font-size: 25px;
+        letter-spacing: 8px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-imagen {
+        height: 600px;
     }
 
     .producto-pagina {
         grid-template-columns: 1fr;
 
-        gap: 40px;
+        gap: 50px;
 
-        padding: 50px 30px;
+        padding: 55px 30px;
     }
 
     .producto-foto-grande {
-        height: 600px;
+        height: 650px;
     }
 
 }
@@ -786,13 +958,15 @@ nav a:hover {
 @media (max-width: 600px) {
 
     header {
-        height: 70px;
+        height: 68px;
 
         padding: 0 20px;
     }
 
     .logo {
-        font-size: 30px;
+        font-size: 27px;
+
+        letter-spacing: 4px;
     }
 
     nav {
@@ -803,69 +977,165 @@ nav a:hover {
     /* PORTADA */
 
     .hero {
-        height: calc(100vh - 70px);
+        height: calc(100vh - 68px);
+
+        min-height: 550px;
+    }
+
+    .hero img {
+        object-position: center;
+    }
+
+    .hero-text {
+        width: 95%;
     }
 
     .hero-text h1 {
-        font-size: 55px;
+        font-size: 58px;
 
-        letter-spacing: 8px;
+        letter-spacing: 9px;
     }
 
     .hero-text h2 {
-        font-size: 22px;
+        font-size: 21px;
 
         letter-spacing: 5px;
+
+        margin-top: 15px;
     }
 
     .hero-text p {
-        font-size: 12px;
+        font-size: 10px;
 
         letter-spacing: 3px;
+    }
+
+    .boton {
+        padding: 15px 25px;
+
+        font-size: 10px;
     }
 
 
     /* COLECCIÓN */
 
     .coleccion {
-        padding: 70px 20px;
+        padding: 75px 18px;
+    }
+
+    .titulo-coleccion {
+        margin-bottom: 45px;
+    }
+
+    .titulo-coleccion p {
+        font-size: 9px;
+
+        letter-spacing: 3px;
     }
 
     .titulo-coleccion h2 {
-        font-size: 28px;
+        font-size: 27px;
+
+        letter-spacing: 4px;
     }
 
     .productos {
         grid-template-columns: 1fr;
+
+        gap: 20px;
     }
 
     .producto-imagen {
-        height: 400px;
+        height: 430px;
+    }
+
+    .producto-info {
+        padding: 23px;
+    }
+
+    .producto-info h3 {
+        font-size: 15px;
+    }
+
+    .precio {
+        font-size: 20px;
     }
 
 
     /* PRODUCTO */
 
     .producto-pagina {
-        padding: 30px 20px;
+        padding: 30px 18px;
 
-        gap: 30px;
+        gap: 35px;
     }
 
     .producto-foto-grande {
-        height: 450px;
+        height: 460px;
+    }
+
+    .miniaturas {
+        gap: 8px;
     }
 
     .miniaturas button {
         height: 90px;
     }
 
+    .producto-detalles {
+        padding: 0;
+    }
+
     .producto-detalles h1 {
         font-size: 30px;
+
+        letter-spacing: 1px;
     }
 
     .producto-precio {
-        font-size: 25px;
+        margin: 25px 0 35px;
+
+        font-size: 26px;
+    }
+
+    .pedido {
+        margin-top: 40px;
+
+        padding-top: 32px;
+    }
+
+    .pedido h2 {
+        font-size: 20px;
+
+        letter-spacing: 3px;
     }
 
 }
+
+
+/* ==================================================
+   MÓVIL PEQUEÑO
+================================================== */
+
+@media (max-width: 380px) {
+
+    .hero-text h1 {
+        font-size: 48px;
+
+        letter-spacing: 7px;
+    }
+
+    .hero-text h2 {
+        font-size: 18px;
+    }
+
+    .producto-imagen {
+        height: 380px;
+    }
+
+    .producto-foto-grande {
+        height: 400px;
+    }
+
+}
+```
