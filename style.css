@@ -1,0 +1,1135 @@
+```css
+/* ==================================================
+   URBAN STREET PR
+   DISEÑO STREETWEAR PREMIUM
+================================================== */
+
+
+/* ==================================================
+   CONFIGURACIÓN GENERAL
+================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #050505;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ==================================================
+   MENÚ
+================================================== */
+
+header {
+    width: 100%;
+    height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 55px;
+
+    background: rgba(5, 5, 5, 0.96);
+
+    border-bottom: 1px solid #1d1d1d;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 34px;
+    font-weight: 900;
+    letter-spacing: 5px;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    letter-spacing: 8px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+nav a {
+    position: relative;
+
+    color: #fff;
+    text-decoration: none;
+
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+nav a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -8px;
+
+    width: 0;
+    height: 1px;
+
+    background: #fff;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #aaa;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ==================================================
+   PORTADA
+================================================== */
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 82px);
+    min-height: 600px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transform: scale(1.02);
+
+    transition: transform 1.5s ease;
+}
+
+.hero:hover img {
+    transform: scale(1.06);
+}
+
+
+/* ==================================================
+   CAPA OSCURA DE LA PORTADA
+================================================== */
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0.25),
+            rgba(0, 0, 0, 0.58)
+        );
+
+    z-index: 1;
+}
+
+
+/* ==================================================
+   TEXTO DE PORTADA
+================================================== */
+
+.hero-text {
+    position: absolute;
+
+    z-index: 2;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 90%;
+
+    text-align: center;
+}
+
+.hero-text h1 {
+    margin: 0;
+
+    font-size: clamp(75px, 12vw, 150px);
+
+    font-weight: 900;
+
+    letter-spacing: 22px;
+
+    line-height: 0.9;
+}
+
+.hero-text h2 {
+    margin: 18px 0 22px;
+
+    font-size: clamp(24px, 4vw, 48px);
+
+    font-weight: 700;
+
+    letter-spacing: 13px;
+}
+
+.hero-text p {
+    margin: 0;
+
+    font-size: 13px;
+
+    letter-spacing: 6px;
+
+    color: #ddd;
+}
+
+
+/* ==================================================
+   BOTÓN PRINCIPAL
+================================================== */
+
+.boton {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 32px;
+
+    padding: 17px 38px;
+
+    background: #fff;
+
+    color: #000;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    border: 1px solid #fff;
+
+    transition:
+        background 0.3s,
+        color 0.3s,
+        transform 0.3s;
+}
+
+.boton:hover {
+    background: transparent;
+
+    color: #fff;
+
+    transform: translateY(-3px);
+}
+
+
+/* ==================================================
+   COLECCIÓN
+================================================== */
+
+.coleccion {
+    width: 100%;
+
+    background: #050505;
+
+    padding: 120px 55px;
+}
+
+.titulo-coleccion {
+    text-align: center;
+
+    margin-bottom: 70px;
+}
+
+.titulo-coleccion p {
+    margin: 0 0 14px;
+
+    color: #777;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+}
+
+.titulo-coleccion h2 {
+    margin: 0;
+
+    font-size: clamp(30px, 4vw, 48px);
+
+    font-weight: 800;
+
+    letter-spacing: 7px;
+}
+
+
+/* ==================================================
+   PRODUCTOS
+================================================== */
+
+.productos {
+    width: 100%;
+
+    max-width: 1450px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px;
+}
+
+
+/* ==================================================
+   TARJETA DE PRODUCTO
+================================================== */
+
+.producto {
+    position: relative;
+
+    background: #0d0d0d;
+
+    border: 1px solid #191919;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease;
+}
+
+.producto:hover {
+    transform: translateY(-8px);
+
+    border-color: #444;
+}
+
+
+/* ==================================================
+   IMAGEN DEL PRODUCTO
+================================================== */
+
+.producto-imagen {
+    width: 100%;
+
+    height: 560px;
+
+    overflow: hidden;
+
+    background: #111;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.7s ease,
+        filter 0.7s ease;
+}
+
+.producto:hover .producto-imagen img {
+    transform: scale(1.06);
+
+    filter: brightness(0.82);
+}
+
+
+/* ==================================================
+   INFORMACIÓN DEL PRODUCTO
+================================================== */
+
+.producto-info {
+    padding: 28px 30px 32px;
+}
+
+.producto-info h3 {
+    margin: 0;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.modelo {
+    margin: 10px 0 0;
+
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+.precio {
+    margin: 20px 0;
+
+    font-size: 22px;
+
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   BOTÓN PRODUCTO
+================================================== */
+
+.boton-producto {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 22px;
+
+    border: 1px solid #555;
+
+    color: #fff;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+    transition:
+        background 0.3s,
+        color 0.3s,
+        border-color 0.3s,
+        transform 0.3s;
+}
+
+.boton-producto:hover {
+    background: #fff;
+
+    color: #000;
+
+    border-color: #fff;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   PÁGINA DEL PRODUCTO
+================================================== */
+
+.producto-pagina {
+    width: 100%;
+
+    max-width: 1450px;
+
+    min-height: calc(100vh - 82px);
+
+    margin: 0 auto;
+
+    padding: 80px 55px;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    gap: 80px;
+}
+
+
+/* ==================================================
+   GALERÍA
+================================================== */
+
+.galeria {
+    width: 100%;
+}
+
+
+/* ==================================================
+   FOTO GRANDE
+================================================== */
+
+.producto-foto-grande {
+    width: 100%;
+
+    height: 680px;
+
+    background: #0d0d0d;
+
+    border: 1px solid #1d1d1d;
+
+    overflow: hidden;
+}
+
+.producto-foto-grande img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.7s ease;
+}
+
+.producto-foto-grande:hover img {
+    transform: scale(1.025);
+}
+
+
+/* ==================================================
+   MINIATURAS
+================================================== */
+
+.miniaturas {
+    width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+
+    margin-top: 12px;
+}
+
+.miniaturas button {
+    width: 100%;
+    height: 125px;
+
+    padding: 0;
+
+    background: #0d0d0d;
+
+    border: 1px solid #292929;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    transition:
+        border-color 0.3s,
+        transform 0.3s;
+}
+
+.miniaturas button:hover {
+    border-color: #fff;
+
+    transform: translateY(-3px);
+}
+
+.miniaturas img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.miniaturas button:hover img {
+    transform: scale(1.06);
+}
+
+
+/* ==================================================
+   DETALLES DEL PRODUCTO
+================================================== */
+
+.producto-detalles {
+    width: 100%;
+
+    padding: 15px 0;
+}
+
+.producto-marca {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 5px;
+}
+
+.producto-detalles h1 {
+    margin: 18px 0 12px;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    line-height: 1.05;
+}
+
+.producto-color {
+    margin: 0;
+
+    color: #888;
+
+    font-size: 12px;
+
+    letter-spacing: 4px;
+}
+
+.producto-precio {
+    margin: 32px 0 45px;
+
+    font-size: 30px;
+
+    font-weight: bold;
+}
+
+
+/* ==================================================
+   CAMPOS
+================================================== */
+
+.campo {
+    margin-bottom: 32px;
+}
+
+.campo label {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: #aaa;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+/* ==================================================
+   TALLA
+================================================== */
+
+.tallas {
+    display: flex;
+
+    gap: 10px;
+}
+
+.tallas button {
+    width: 72px;
+    height: 50px;
+
+    background: #fff;
+
+    color: #000;
+
+    border: 1px solid #fff;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    cursor: default;
+}
+
+
+/* ==================================================
+   CANTIDAD
+================================================== */
+
+.cantidad {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.cantidad button {
+    width: 42px;
+    height: 42px;
+
+    background: #080808;
+
+    color: #fff;
+
+    border: 1px solid #444;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s,
+        color 0.3s,
+        border-color 0.3s;
+}
+
+.cantidad button:hover {
+    background: #fff;
+
+    color: #000;
+
+    border-color: #fff;
+}
+
+.cantidad span {
+    min-width: 25px;
+
+    text-align: center;
+
+    font-size: 17px;
+}
+
+
+/* ==================================================
+   FORMULARIO DE PEDIDO
+================================================== */
+
+.pedido {
+    margin-top: 55px;
+
+    padding-top: 42px;
+
+    border-top: 1px solid #202020;
+}
+
+.pedido h2 {
+    margin: 0;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.pedido-descripcion {
+    max-width: 500px;
+
+    margin: 16px 0 32px;
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.8;
+}
+
+.pedido label {
+    display: block;
+
+    margin-top: 22px;
+
+    margin-bottom: 9px;
+
+    color: #aaa;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+.pedido input,
+.pedido textarea {
+    width: 100%;
+
+    padding: 15px 16px;
+
+    background: #0d0d0d;
+
+    color: #fff;
+
+    border: 1px solid #292929;
+
+    outline: none;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    font-size: 13px;
+
+    transition: border-color 0.3s;
+}
+
+.pedido input {
+    height: 52px;
+}
+
+.pedido textarea {
+    min-height: 110px;
+
+    resize: vertical;
+}
+
+.pedido input:focus,
+.pedido textarea:focus {
+    border-color: #aaa;
+}
+
+
+/* ==================================================
+   BOTÓN SOLICITAR PEDIDO
+================================================== */
+
+.boton-pedido {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 19px;
+
+    background: #fff;
+
+    color: #000;
+
+    border: 1px solid #fff;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s,
+        color 0.3s,
+        transform 0.3s;
+}
+
+.boton-pedido:hover {
+    background: transparent;
+
+    color: #fff;
+
+    transform: translateY(-2px);
+}
+
+
+/* ==================================================
+   MENSAJE DEL PEDIDO
+================================================== */
+
+.mensaje-pedido {
+    margin-top: 15px;
+
+    color: #888;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1100px) {
+
+    header {
+        padding: 0 35px;
+    }
+
+    nav {
+        gap: 25px;
+    }
+
+    .coleccion {
+        padding: 90px 35px;
+    }
+
+    .producto-imagen {
+        height: 480px;
+    }
+
+    .producto-pagina {
+        padding: 60px 35px;
+
+        gap: 45px;
+    }
+
+    .producto-foto-grande {
+        height: 580px;
+    }
+}
+
+
+/* ==================================================
+   TABLET PEQUEÑA
+================================================== */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 25px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 10px;
+
+        letter-spacing: 1px;
+    }
+
+    .hero-text h1 {
+        letter-spacing: 14px;
+    }
+
+    .hero-text h2 {
+        letter-spacing: 8px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .producto-imagen {
+        height: 600px;
+    }
+
+    .producto-pagina {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+        padding: 55px 30px;
+    }
+
+    .producto-foto-grande {
+        height: 650px;
+    }
+}
+
+
+/* ==================================================
+   MÓVIL
+================================================== */
+
+@media (max-width: 600px) {
+
+    header {
+        height: 68px;
+
+        padding: 0 20px;
+    }
+
+    .logo {
+        font-size: 27px;
+
+        letter-spacing: 4px;
+    }
+
+    nav {
+        display: none;
+    }
+
+
+    /* PORTADA */
+
+    .hero {
+        height: calc(100vh - 68px);
+
+        min-height: 550px;
+    }
+
+    .hero img {
+        object-position: center;
+    }
+
+    .hero-text {
+        width: 95%;
+    }
+
+    .hero-text h1 {
+        font-size: 58px;
+
+        letter-spacing: 9px;
+    }
+
+    .hero-text h2 {
+        font-size: 21px;
+
+        letter-spacing: 5px;
+
+        margin-top: 15px;
+    }
+
+    .hero-text p {
+        font-size: 10px;
+
+        letter-spacing: 3px;
+    }
+
+    .boton {
+        padding: 15px 25px;
+
+        font-size: 10px;
+    }
+
+
+    /* COLECCIÓN */
+
+    .coleccion {
+        padding: 75px 18px;
+    }
+
+    .titulo-coleccion {
+        margin-bottom: 45px;
+    }
+
+    .titulo-coleccion p {
+        font-size: 9px;
+
+        letter-spacing: 3px;
+    }
+
+    .titulo-coleccion h2 {
+        font-size: 27px;
+
+        letter-spacing: 4px;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .producto-imagen {
+        height: 430px;
+    }
+
+    .producto-info {
+        padding: 23px;
+    }
+
+    .producto-info h3 {
+        font-size: 15px;
+    }
+
+    .precio {
+        font-size: 20px;
+    }
+
+
+    /* PRODUCTO */
+
+    .producto-pagina {
+        padding: 30px 18px;
+
+        gap: 35px;
+    }
+
+    .producto-foto-grande {
+        height: 460px;
+    }
+
+    .miniaturas {
+        gap: 8px;
+    }
+
+    .miniaturas button {
+        height: 90px;
+    }
+
+    .producto-detalles {
+        padding: 0;
+    }
+
+    .producto-detalles h1 {
+        font-size: 30px;
+
+        letter-spacing: 1px;
+    }
+
+    .producto-precio {
+        margin: 25px 0 35px;
+
+        font-size: 26px;
+    }
+
+    .pedido {
+        margin-top: 40px;
+
+        padding-top: 32px;
+    }
+
+    .pedido h2 {
+        font-size: 20px;
+
+        letter-spacing: 3px;
+    }
+}
+
+
+/* ==================================================
+   MÓVIL PEQUEÑO
+================================================== */
+
+@media (max-width: 380px) {
+
+    .hero-text h1 {
+        font-size: 48px;
+
+        letter-spacing: 7px;
+    }
+
+    .hero-text h2 {
+        font-size: 18px;
+    }
+
+    .producto-imagen {
+        height: 380px;
+    }
+
+    .producto-foto-grande {
+        height: 400px;
+    }
+}
+```
